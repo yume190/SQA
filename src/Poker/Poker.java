@@ -35,8 +35,18 @@ public class Poker {
 
 	public static void main (String[] args)  {
 		Poker poker = new Poker();
-		poker.cards = poker.shuffle();
+		System.out.println("洗牌前:");
 		poker.printCard();
+		System.out.print("第10張牌:");
+		System.out.print(poker.getCard(10));
+		System.out.print("\n");
+		
+		poker.cards = poker.shuffle();
+		
+		System.out.println("洗牌後:");
+		poker.printCard();
+		System.out.print("第10張牌:");
+		System.out.print(poker.getCard(10));
 	}  
 
 
