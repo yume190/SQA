@@ -1,13 +1,20 @@
 package Contest;
 
+import java.util.ArrayList;
+
 public class Test {
 	public static void main (String[] args)  {
-		Question questions[] = new Question[10];
 		
-		for(int count = 0; count < questions.length; count++){
-			questions[count] = new Question("Question " + (count+1) + " : ",1,10);
+		ArrayList<Question> questionList = new ArrayList<Question>();;
+		
+		for(int count = 0; count < 5; count++){
+			questionList.add(new Question("Question " + (count+1) + " : ",1,20));
 		}
-		Scroll scroll = new Scroll(questions);
-		ContestUI contestUI = new ContestUI(scroll);
+		try {
+			Scroll scroll = new Scroll(questionList);
+			scroll.startExam();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}  
 }
