@@ -1,6 +1,6 @@
 package ReadScroll;
 
-public class Test {
+public class ReadScrollTest {
 	public static void main (String[] args)  {
 		try {
 			ReadQuestion rQ1 = new ReadQuestion("text1.txt");
